@@ -52,16 +52,16 @@
 		raise_layer {
 // ------------------------------------------------------------------------------------------------------------
 // |   `    |  BT_1  | BT_2 | BT_3 | BT_4 | BT_5 |               |     |     |     |  -  |  =  | DEL |
-// | EP_TOG | BT_CLR |      |      |      |      |               |     |     |     |     |     |     |
-// | EP_ON  |        |      |      |      |      |               |     |     |     |     |     |     |
-// | EP_OFF |        |      |      |      |      |      |  |     |     |     |     |     |     |     |
+// |        | BT_CLR |      |      |      |      |               |     |     |     |     |     |     |
+// |        |        |      |      |      |      |               |     |     |     |     |     |     |
+// |        |        |      |      |      |      |      |  |     |     |     |     |     |     |     |
 //                          |      |      |      |      |  |     |     |     |     |
 			bindings = <
-&kp GRAVE          &bt BT_SEL 0 &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                         &trans    &trans    &trans    &kp MINUS  &kp EQUAL  &kp DEL
-&ext_power EP_TOG  &bt BT_CLR   &trans        &trans        &trans        &trans                               &trans    &trans    &trans    &trans     &trans     &trans
-&ext_power EP_ON   &trans       &trans        &trans        &trans        &trans                               &trans    &trans    &trans    &trans     &trans     &trans
-&ext_power EP_OFF  &trans       &trans        &trans        &trans        &trans        &trans   &trans        &trans    &trans    &trans    &trans     &trans     &trans
-                                              &trans        &trans        &trans        &trans   &trans        &trans    &trans    &trans
+&kp GRAVE   &bt BT_SEL 0 &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                         &trans    &trans    &trans    &kp MINUS  &kp EQUAL  &kp DEL
+&trans      &bt BT_CLR   &trans        &trans        &trans        &trans                               &trans    &trans    &trans    &trans     &trans     &trans
+&trans      &trans       &trans        &trans        &trans        &trans                               &trans    &trans    &trans    &trans     &trans     &trans
+&trans      &trans       &trans        &trans        &trans        &trans        &trans   &trans        &trans    &trans    &trans    &trans     &trans     &trans
+                                       &trans        &trans        &trans        &trans   &trans        &trans    &trans    &trans
 			>;
 
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
